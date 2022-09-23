@@ -11,7 +11,7 @@
           <a href="#home" class="text-danger">Home</a>
         </li>
         <li class="nav-item">
-          <a href="#about-me" class="text-danger">About</a>
+          <a href="#about-me" class="text-danger">About Me</a>
         </li>
         <li class="nav-item">
           <a href="#can-do" class="text-danger"> Portfolio</a>
@@ -19,9 +19,16 @@
         <li class="nav-item" >
           <a href="#projects" class="text-danger">My Project</a>
         </li>
+
+        <li class="nav-item">
+          <a href="#member" class="text-danger">Team Member</a>
+        </li>
+
         <li class="nav-item">
           <a href="#contact-me" class="text-danger">Contact</a>
         </li>
+
+        
       </ul>
     </div>
   </div>
@@ -282,7 +289,7 @@
   <!-- my project end -->
 
   <!-- Contact me start-->
-    <div class="bg-danger" id="contact-me">
+    <div class="bg-danger shadow-lg">
         <div class="row  text-center text-white" style="height:380px">
           <div class="col h-50" >
             <h4 class="pt-5 mt-5">Do you have any Project?</h4>
@@ -295,23 +302,23 @@
 
   <!-- member selector start -->
 
-    <div class="member-section">
+    <div class="member-section" id="member">
       <div class="about-container container-lg">
       <div class="row ">
         <div class="col-lg-12 text-center"><h2  class=" fw-bold  mt-4">Our Team Member</h2></div>
       </div>
     </div>
       <div class="row m-3  bg-light py-4 px-1">
-        <div class="col-lg-8  m-auto  shadow-sm">
+        <div class="col-lg-8  m-auto  shadow-lg">
           <!-- carousel all request start -->
           <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
+            <div class="carousel-indicators ">
               <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active bg-danger" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" class="bg-danger" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" class="bg-danger" aria-label="Slide 3"></button>
             </div>
           <div class=" carousel-inner">
-            <div class="card-container carousel-item active  p-3">
+            <div class="card-container carousel-item active  px-3 py-5">
             <div class="d-flex  align-items-center ">
                 <img src="../assets/boy.jpg" class="rounded-circle  img-thumbnail" style="width:150px;height:150px" alt="">
                 <div class="text-container ms-3">
@@ -331,7 +338,7 @@
             </div>
           </div>
 
-          <div class="card-container p-3 carousel-item">
+          <div class="card-container px-3 py-5 carousel-item">
             <div class="d-flex  align-items-center ">
                 <img src="../assets/girl3.png" class="rounded-circle  img-thumbnail" style="width:150px;height:150px" alt="">
                 <div class="text-container ms-3">
@@ -350,7 +357,7 @@
             </div>
           </div>
 
-          <div class="card-container p-3  carousel-item">
+          <div class="card-container px-3 py-5  carousel-item">
             <div class="d-flex  align-items-center ">
                 <img src="../assets/girl1.jpg" class="rounded-circle  img-thumbnail" style="width:150px;height:150px" alt="">
                 <div class="text-container ms-3">
@@ -360,7 +367,7 @@
                 
             </div>
             <p class="text-muted mt-3"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias quod delectus ipsam blanditiis quisquam atque eius possimus incidunt veritatis provident obcaecati nam, quasi dolore itaque deserunt nulla magnam similique illo!</p>
-            <div class="star-container text-danger">
+            <div class="star-container text-danger ">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
@@ -375,13 +382,115 @@
       </div>
     </div>
   <!-- member selector end -->
+
+    <!-- contact section start-->
+      <div class="container-lg" id="contact-me">
+        <div class="row ">
+          <div class="col-lg-12 text-center"><h2  class="fw-bold mt-4">Contact me</h2></div>
+        </div>
+
+        <div class="row ">
+          <div class="col-md-4 p-5 ">
+             <div class="input-name mb-4 ">
+                <div class="contact-item d-flex justify-content-center me-3">
+                  <div class="icon text-danger"><i class="fa-solid fa-phone fs-4 mt-2"></i></div>
+                  <div class="text ms-4">
+                    <div class="phone fs-5">Phone</div>
+                    <div class="text-muted">09962294805</div>
+                  </div>
+                </div>
+             </div>
+             <div class="input-name mb-4">
+                <div class="contact-item d-flex justify-content-center ms-5 ">
+                  <div class="icon text-danger"><i class="fa-solid fa-envelope fs-4 mt-2"></i></div>
+                  <div class="text ms-4">
+                    <div class="email fs-5">Email</div>
+                    <div class="text-muted">ahein8604@gmail.com</div>
+                  </div>
+                </div>
+             </div>
+             <div class="input-name mb-4">
+                <div class="contact-item d-flex justify-content-center me-5 ms-2">
+                  <div class="icon text-danger"><i class="fa-solid fa-map-location-dot fs-4 mt-2"></i></div>
+                  <div class="text ms-4">
+                    <div class="phone fs-5">Address</div>
+                    <div class="text-muted">Japan</div>
+                  </div>
+                </div>
+             </div>
+             
+          </div>
+          <div class="col-md-8 py-md-5 " >
+              <div class="container-md">
+                <form @submit.prevent="contact">
+                  <div class="row">
+                  <div class="col-md-6 mb-3">
+                      <input type="text" class="form-control " placeholder="Enter your name"  v-model="name">
+                     
+                  </div>
+                  <div class="col-md-6 mb-3">
+                     <input type="email" name="" id="" class="form-control " placeholder="Enter your email" v-model="email">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 mb-3">
+                    <input type="text" class="form-control " placeholder="Enter Subject" v-model="subject">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 mb-3">
+                    <textarea placeholder="Your Message" class="form-control" cols="65" rows="10" v-model="message"></textarea>
+                  </div>
+                </div>
+
+
+                <button class="btn btn-danger px-1 mb-5">Send Message <i class=" ms-2 fa-solid fa-paper-plane"></i></button>
+                </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    <!-- contact section end -->
+
+
+    <!-- footer start -->
+    <div class="footer " >
+      <div class="row h-75">
+        <div class="col-md-12 border text-white border-top text-center p-5 bg-danger">
+          <h5> This is all about my self.Thank for Watching!</h5>
+          <p class="mt-4">Have a greate day!</p>
+        </div>
+      </div>
+    </div>
+    <!-- footer end  -->
 </template>
 
 <script>
+import { ref } from '@vue/reactivity'
 
 
 export default {
- 
+ setup(){
+    let name =ref("");
+    let email =ref("")
+    let subject =ref("");
+    let message=ref("")
+
+    let contact =()=>{
+      let data ={
+        username:name.value,
+        useremail:email.value,
+        usersubject:subject.value,
+        usermessage:message.value,
+      }
+      console.log(data)
+      
+    }
+
+
+
+    return {name,email,subject,message,contact}
+ }
 }
 </script>
 
